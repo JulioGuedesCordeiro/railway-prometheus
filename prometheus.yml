@@ -13,7 +13,6 @@ scrape_configs:
     scheme: https
     metrics_path: /metrics
     scrape_interval: 15s
-    # se o seu endpoint exigir user/pass, configure aqui:
     basic_auth:
       username: "${PROM_USER}"
       password: "${PROM_PASS}"
@@ -29,3 +28,12 @@ scrape_configs:
       password: "${PROM_PASS}"
     static_configs:
       - targets: ['api-production-f104.up.railway.app']
+
+  - job_name: 'postgres'
+    scheme: http
+    metrics_path: /metrics
+    scrape_interval: 15s
+    static_configs:
+      - targets:
+          - 'tramway.proxy.rlwy.net:33497'
+
