@@ -35,5 +35,5 @@ scrape_configs:
     scrape_interval: 15s
     static_configs:
       - targets:
-          - ['postgres-production-3068.up.railway.app:5432']
+          - 'postgres-exporter-production-3068.up.railway.app:9187'
 
