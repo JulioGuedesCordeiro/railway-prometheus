@@ -35,5 +35,5 @@ scrape_configs:
     scrape_interval: 15s
     static_configs:
       - targets:
-          - 'tramway.proxy.rlwy.net:33497'
+          - [https://postgres-production-3068.up.railway.app:5432]
 
